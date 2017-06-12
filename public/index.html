@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <!-- THESE ARE THE REQUIRED FILES TO USE WEB PUSH NOTIFICATIONS -->
+    <link rel="manifest" href="manifest.json">
+    <script src="//messaging-public.realtime.co/js/2.1.0/ortc.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCbBJU2w_BJWCzKf9aYyNa1gNjCU7BjgxA",
+        authDomain: "pushnotifcationsverios.firebaseapp.com",
+        databaseURL: "https://pushnotifcationsverios.firebaseio.com",
+        projectId: "pushnotifcationsverios",
+        storageBucket: "pushnotifcationsverios.appspot.com",
+        messagingSenderId: "744488072277"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <title>Push Vérios</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs();
+      });
+    </script>
+  </body>
+</html>

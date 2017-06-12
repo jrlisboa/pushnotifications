@@ -1,0 +1,85 @@
+/*$primary: #00c88d;
+$secondary: #ef534f;*/
+
+nav{
+  background-color: #f7f7f7;
+}
+
+.side-nav li a{
+  color: #fff;
+  font-size: 15px;
+  height: 65px;
+  padding-top: 10px;
+}
+
+.side-nav li a:hover{
+  background-color: #666;
+}
+
+.side-nav li a .material-icons{
+  color: #fff !important;
+}
+
+.side-nav{
+  background-color: #555;
+  position: fixed !important;
+}
+
+.logo{
+  color: #fff;
+  font-family: 'Grand Hotel', cursive;
+  text-align: center;
+  width: 100%;
+  font-size: 3.5rem;
+  margin: 40px 0px 40px 0px;
+}
+
+.btnSair{
+  margin-right: 50px;
+  background-color: #f7f7f7;
+  border: 2px solid #ef534f;
+  height: 40px;
+  width: 40px;
+  margin-top: 13px;
+  border-radius: 400px;
+}
+
+.componentes{
+  padding: 30px 0px 0px 30px;
+  width: 70%;
+  height: 80vh;
+  margin-left: 360px;
+  margin-top: 50px;
+}
+
+.btnSair a:hover{
+  background-color: transparent;
+}
+
+.iconeSair{
+  margin-left: -9px;
+  margin-top: -9px;
+  color: #ef534f;
+}
+
+.spnPush{
+  color: #00c88d;
+}
+
+.tab .material-icons{
+  font-size: 40px;
+}
+
+.tab a{
+  font-size: 18px !important;
+  font-weight: 700;
+  color: #00c88d !important;
+}
+
+.tab a .active{
+  border-bottom: 2px solid #00c88d !important;
+}
+
+.tabs .indicator{
+  background-color: #00c88d !important;
+}

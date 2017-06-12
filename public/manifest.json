@@ -1,0 +1,9 @@
+{
+  "short_name": "Verios Push",
+  "name": "Verios push notification mananger",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "gcm_sender_id": "103953800507"
+}
