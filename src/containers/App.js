@@ -10,7 +10,7 @@ import '../styles/App.css';
 import Notifications from '../components/notifications';
 import Subscribers from '../components/subscribers';
 import Devs from '../components/devs';
-//import Store from '../stores/store.js';
+import Store from '../stores/store.js';
 //
 // const store = new Store();
 // useStrict(true);
