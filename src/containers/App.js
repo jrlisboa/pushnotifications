@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useStrict } from 'mobx';
 import { Provider } from 'mobx-react';
 import '../styles/App.css';
-// import '../stores/service-worker';
-// import '../stores/WebPushManager';
-// import '../stores/configs';
 
 import Notifications from '../components/notifications';
 import Subscribers from '../components/subscribers';
 import Devs from '../components/devs';
 import Store from '../stores/store.js';
-//
-// const store = new Store();
-// useStrict(true);
+
+const store = new Store();
+useStrict(true);
 
 class App extends Component {
   render() {
+    store.registerServiceWorker();
+    store.askPermission();
     return (
       <div className="App">
 
@@ -37,7 +36,7 @@ class App extends Component {
 
         <div className="row">
           <div className="componentes">
-            <Provider>
+            <Provider store={store}>
               <Router>
                 <div>
                   <Route exact path="/" component={Notifications}/>
