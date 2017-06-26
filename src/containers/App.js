@@ -14,7 +14,7 @@ useStrict(true);
 
 class App extends Component {
   render() {
-    store.registerServiceWorker();
+    store.subscribeUserToPush();
     store.askPermission();
     return (
       <div className="App">

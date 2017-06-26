@@ -3,6 +3,7 @@ import { observer, inject } from 'mobx-react';
 import '../../styles/App.css';
 import '../../styles/notifications.css';
 
+
 export default inject(["store"]) (observer(({ store }) => (
   <div className="row">
     <div className="row">
@@ -53,7 +54,7 @@ export default inject(["store"]) (observer(({ store }) => (
             </div>
 
             <div className="col s12 notSend">
-              <a className="waves-effect btn col s4 offset-s4" id="enviarPush"><i className="material-icons right">cloud</i>notificar inscritos</a>
+              <a className="waves-effect btn col s4 offset-s4" id="enviarPush" onClick={() => store.sendPushNotification()}><i className="material-icons right">cloud</i>notificar inscritos</a>
             </div>
           </div>
         </div>

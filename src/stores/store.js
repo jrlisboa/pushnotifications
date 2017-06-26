@@ -1,6 +1,29 @@
 import { observable, action } from 'mobx';
 
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+
 export default class{
+
+  @observable notTitle = "";
+  @observable notBody = "";
+
+  @action setTitle = (val) => this.notTitle = val;
+  @action setBody = (val) => this.notBody = val;
+
   registerServiceWorker() {
     return navigator.serviceWorker.register('service-worker.js')
     .then(function(registration) {
@@ -11,6 +34,9 @@ export default class{
       console.error('Unable to register service worker.', err);
     });
   }
+
+
+
   askPermission() {
     return new Promise(function(resolve, reject) {
       const permissionResult = Notification.requestPermission(function(result) {
@@ -23,15 +49,17 @@ export default class{
     })
     .then(function(permissionResult) {
       if (permissionResult !== 'granted') {
-        console.log('Nós não temos permissão para te notificar!');
-      }else{
-        console.log('Temos permissão');
+        throw new Error('We weren\'t granted permission.');
       }
     });
   }
 
+
+
+
+
   subscribeUserToPush() {
-    return getSWRegistration()
+    return this.registerServiceWorker()
     .then(function(registration) {
       const subscribeOptions = {
         userVisibleOnly: true,
@@ -48,9 +76,15 @@ export default class{
     });
   }
 
-  @observable notTitle = "";
-  @observable notBody = "";
 
-  @action setTitle = (val) => this.notTitle = val;
-  @action setBody = (val) => this.notBody = val;
+  sendPushNotification() {
+    return this.registerServiceWorker()
+    .then(function(registration) {
+      const title = 'Simple Title';
+      const options = {
+        body: 'Simple piece of body text.\nSecond line of body text :)'
+      };
+      registration.showNotification(title, options);
+    });
+  }
 }
