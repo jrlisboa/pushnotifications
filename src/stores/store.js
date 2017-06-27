@@ -20,9 +20,11 @@ export default class{
 
   @observable notTitle = "";
   @observable notBody = "";
+  @observable notImage = "";
 
   @action setTitle = (val) => this.notTitle = val;
   @action setBody = (val) => this.notBody = val;
+  @action setImage = (val) => this.notImage = val;
 
   registerServiceWorker() {
     return navigator.serviceWorker.register('service-worker.js')
@@ -77,12 +79,14 @@ export default class{
   }
 
 
-  sendPushNotification() {
+  sendPushNotification(notTitle, notBody, notImage) {
     return this.registerServiceWorker()
     .then(function(registration) {
-      const title = 'Simple Title';
+      const title = notTitle;
       const options = {
-        body: 'Simple piece of body text.\nSecond line of body text :)'
+        body: notBody,
+        icon: 'https://verios.com.br/wp-content/uploads/2017/02/ueslei-big.png',
+        image: notImage
       };
       registration.showNotification(title, options);
     });

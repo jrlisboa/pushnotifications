@@ -2,9 +2,10 @@
 $secondary: #ef534f;*/
 
 .notification{
-  min-height: 170px;
+  height: auto;
   padding: 18px;
   margin-top: 5vh;
+  padding: 20px 0px !important;
 }
 .notification .notTitle{
   font-size: 18px;
