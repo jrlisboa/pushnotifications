@@ -21,10 +21,12 @@ export default class{
   @observable notTitle = "";
   @observable notBody = "";
   @observable notImage = "";
+  @observable notClick = "";
 
   @action setTitle = (val) => this.notTitle = val;
   @action setBody = (val) => this.notBody = val;
   @action setImage = (val) => this.notImage = val;
+  @action setClick = (val) => this.notClick = val;
 
   registerServiceWorker() {
     return navigator.serviceWorker.register('service-worker.js')
@@ -79,7 +81,7 @@ export default class{
   }
 
 
-  sendPushNotification(notTitle, notBody, notImage) {
+  sendPushNotification(notTitle, notBody, notImage, notClick) {
     return this.registerServiceWorker()
     .then(function(registration) {
       const title = notTitle;
