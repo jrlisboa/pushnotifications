@@ -1,15 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
+import App from './components/app';
+import injectTpEventPlugin from 'react-tap-event-plugin';
+import registerServiceWorker from './registerServiceWorker';
 
-import Container from './containers/App'
+injectTpEventPlugin();
 
-class Rotas extends React.Component<> {
-  render(){
-    return(
-      <Container/>
-    );
-  }
-}
-
-ReactDOM.render(<Rotas/>, document.getElementById('root'));
+ReactDOM.render(App, document.getElementById('root'));
+registerServiceWorker();

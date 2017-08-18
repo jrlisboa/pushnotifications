@@ -1,0 +1,90 @@
+.card-visao {
+    width: calc(50% - 8px);
+    float: left;
+    margin-top: 16px;
+    height: 230px;
+
+    &__right{
+        width: calc(50% - 8px);
+        float: left;
+        margin-left: 16px;
+        margin-top: 16px;
+        height: 230px;
+    }
+
+    &__body {
+        width: 50%;
+        height: 90px;
+        float: left;
+        text-align: center;
+
+        &__value {
+            width: 100%;
+            font-size: 45px;
+            color: rgba(0, 0, 0, 0.87);
+
+            &__prefix {
+                font-size: 24px;
+                margin-right: 10px;
+            }
+        }
+
+        &__label {
+            width: 100%;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.54);
+            font-weight: 500;
+        }
+    }
+
+    &__action {
+        width: 100%;
+        height: 48px;
+        position: relative;
+        float: left;
+        bottom: 0;
+        border-top: solid 1px rgba(0, 0, 0, 0.12);
+        margin-top: 24px;
+
+        &__button {
+            margin: auto;
+            height: 48px !important;
+        }
+    }
+
+    &__item {
+        height: 76px;
+        width: 100%;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+
+        &__title {
+            width: calc(33.33% - 20px);
+            float: left;
+            height: 76px;
+            padding-left: 20px;
+            line-height: 76px;
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+        &__value {
+            width: calc(33.33% - 40px);
+            float: left;
+            height: 76px;
+            line-height: 76px;
+            padding-right: 40px;
+            text-align: right;
+            font-size: 24px;
+        }
+
+        &__action {
+            width: 33.33%;
+            float: left;
+            height: 76px;
+
+            &__button {
+
+                height: 100% !important;
+            }
+        }
+    }
+}

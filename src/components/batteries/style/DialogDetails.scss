@@ -1,0 +1,120 @@
+.details-dialog {
+    width: 440px !important;
+
+    &__head {
+        height: 38.5px;
+        padding: 24px;
+        margin: -24px !important;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.12) !important;
+        &__title {
+            font-size: 20px;
+            color: black;
+            float: left;
+            width: 360px;
+        }
+        &__close{
+            cursor: pointer;
+            float: right;
+            color: #ccc;
+            margin-top: -5px;
+        }
+        &__dateTime {
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.54);
+            margin-top: 5px !important;
+            float: left;
+            width: 100%;
+        }
+    }
+
+    &__value {
+        height: 28.5px;
+        padding: 24px;
+        padding-top: 40px;
+        margin: -24px !important;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.12) !important;
+
+        &__price {
+            width: 25% !important;
+            height: 50px !important;
+            float: left;
+
+            &__label {
+                float: left;
+                width: 100%;
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.38);
+            }
+            &__data {
+                float: left;
+                width: 100%;
+                font-size: 15px;
+                font-weight: 500;
+                color: #1a1a1a;
+            }
+        }
+        &__status {
+            width: 25% !important;
+            height: 50px !important;
+            float: left;
+
+            &__label {
+                float: left;
+                width: 100%;
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.38);
+            }
+            &__data {
+                float: left;
+                width: 100%;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+        &__button {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    &__infos {
+        padding: 24px;
+        padding-top: 40px;
+        margin: -24px !important;
+
+        &__left {
+            width: 50%;
+            float: left;
+            height: 100%;
+
+            &__block {
+                margin-bottom: 12px;
+                &__label {
+                    color: rgba(0, 0, 0, 0.38);
+                    font-size: 12px;
+                }
+                &__data {
+                    color: #1a1a1a;
+                    font-size: 14px;
+                    width: 100%;
+
+                    .name {
+                        font-weight: 500;
+                        width: 70%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        float: left;
+                    }
+
+                    .link {
+                        width: 20%;
+                        float: left;
+                        margin-top: -5px;
+                    }
+                }
+            }
+
+        }
+    }
+}

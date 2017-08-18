@@ -1,0 +1,20 @@
+.private-router {
+    $menu-width: 256px;
+
+    .menu {
+        width: $menu-width;
+    }
+
+    .container {
+        background: #fafafa;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-left: $menu-width;
+        width: calc(100% - $menu-width);
+    }
+
+    .content {
+        padding: 0px 24px 24px 24px;
+    }
+}

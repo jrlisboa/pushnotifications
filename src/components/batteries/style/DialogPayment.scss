@@ -1,0 +1,133 @@
+.payment-dialog {
+    width: 440px !important;
+
+    &__edit {
+        width: 440px !important;
+
+        &__content {
+            margin: -24px !important;
+            padding: 8px 12px;
+
+            &__action {
+                width: 150px !important;
+                margin-left: calc(100% - 150px) !important;
+            }
+        }
+    }
+
+    &__head {
+        height: 38.5px;
+        padding: 24px;
+        margin: -24px !important;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.12) !important;
+        &__title {
+            font-size: 20px;
+            color: black;
+            float: left;
+            width: 360px;
+        }
+        &__close{
+            cursor: pointer;
+            float: right;
+            color: #ccc;
+            margin-top: -5px;
+        }
+        &__dateTime {
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.54);
+            margin-top: 5px !important;
+            float: left;
+            width: 100%;
+        }
+    }
+
+    &__info-confirmation {
+        height: 140px;
+        padding: 24px;
+        padding-top: 40px;
+        margin: -24px !important;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.12) !important;
+
+        &__head {
+            float: left;
+            width: 100%;
+            margin-bottom: 24px;
+
+            &__title {
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.87);
+            }
+
+            &__subtitle {
+                font-size: 13px;
+            }
+        }
+
+        &__left {
+            float: left;
+            width: 50%;
+
+            &__block {
+                margin-bottom: 15px;
+                cursor: pointer;
+                &__label {
+                    font-size: 12px;
+
+                    &__icon {
+                        width: 15px !important;
+                        margin-bottom: -8px;
+                    }
+                }
+                &__data {
+                    color: rgba(0, 0, 0, 0.87);
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__action-confirmation {
+        height: 110px;
+        padding: 24px;
+        padding-top: 40px;
+        margin: -24px !important;
+
+        &__value {
+            float: left;
+            width: 100%;
+            margin-bottom: 12px;
+
+            &__label {
+                font-size: 12px;
+                text-align: center !important;
+            }
+
+            &__data {
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.87);
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        &__button-go {
+            float: left;
+            width: 100%;
+            &__component {
+                width: 188px;
+                margin-left: calc(50% - 94px) !important;
+            }
+        }
+
+        &__button-back {
+            float: left;
+            width: 100%;
+            margin-top: 5px;
+            &__component {
+                width: 188px;
+                margin-left: calc(50% - 94px) !important;
+            }
+        }
+    }
+}

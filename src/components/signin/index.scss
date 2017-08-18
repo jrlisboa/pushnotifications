@@ -1,0 +1,72 @@
+.card-signin {
+    width: 350px;
+    margin: auto;
+    margin-top: 42px;
+
+    &__header{
+        height: 150.5px;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.12);
+        padding-top: 36px;
+
+        &__title {
+            height: 32px;
+            font-size: 20px;
+            line-height: 1.6;
+            color: rgba(0, 0, 0, 0.87);
+            text-align: center;
+            margin: 0px;
+        }
+
+        &__logo {
+            width: 176px;
+            height: 35px;
+            margin: auto;
+            margin-top: 12px;
+            background-image: url('../../media/images/logos/portofaz@3x.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+    }
+
+    &__form {
+        padding: 24px;
+        padding-bottom: 36px;
+
+        &__title{
+            width: 100%;
+            text-align: center;
+            height: 32px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 2.46;
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        &__input {
+            margin-top: 0px !important;
+        }
+
+        &__error {
+            font-size: 14px;
+            color: #E53935;
+        }
+
+    }
+
+    &__submit {
+        margin-top: 36px;
+        width: 100%;
+        height: 36px;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+    .card-signin {
+        width: 100%;
+        margin: auto;
+        height: 100vh;
+    }
+}
